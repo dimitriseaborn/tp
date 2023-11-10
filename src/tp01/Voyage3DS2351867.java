@@ -6,6 +6,8 @@
  *  DA : 2351867
  */
 
+package tp01;
+
 import java.util.Scanner;
 
 public class Voyage3DS2351867 {

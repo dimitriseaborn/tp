@@ -5,6 +5,8 @@
  *  DA : 2351867
  */
 
+package tp03;
+
 import java.util.Arrays;
 import java.util.Random;
 

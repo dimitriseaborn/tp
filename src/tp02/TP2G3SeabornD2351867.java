@@ -5,6 +5,8 @@
  *  DA : 2351867
  */
 
+package tp02;
+
 import java.util.Scanner;
 
 public class TP2G3SeabornD2351867 {
