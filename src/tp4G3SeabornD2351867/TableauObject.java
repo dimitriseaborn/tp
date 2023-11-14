@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class TableauObject {
     private Object[] tableau;
-    public static final Object VALEUR_DEFAUT = 0;
+    public static final Object VALEUR_DEFAUT = null;
     public static final int LONGUEUR_DEFAUT = 5;
 
     public TableauObject() {

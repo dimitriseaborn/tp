@@ -1,5 +1,4 @@
 package tp4G3SeabornD2351867;
-
 /**
  * Classe de tests pour TableauObject
  * TableauObject est une structure de données qui emmagasine des réels . Le
@@ -7,7 +6,7 @@ package tp4G3SeabornD2351867;
  *
  * @link https://github.com/robertAube/201A23-demos-RA/tree/main/TP4
  * @author Robert Aubé
- * @version A23 420-201 TP4a 2023-11-06  V1
+ * @version A23 420-201 TP4a 2023-11-06  Version 5
  */
 public class TableauObjectTest {
     //    Ces variables d'instance doivent être décommentées aussitôt que votre classe TableauTest est créé
@@ -18,7 +17,7 @@ public class TableauObjectTest {
     private TestHelper testHelper;
 
     public TableauObjectTest() {
-        System.out.println("201-TP4B - Tests pour TableauObject - Version 4");
+        System.out.println("201-TP4B - Tests pour TableauObject - Version 5");
         System.out.println("https://github.com/robertAube/201A23-demos-RA/tree/main/TP4");
         testHelper = new TestHelper();
         tester();
@@ -45,7 +44,7 @@ public class TableauObjectTest {
     private void tester_instancierEtToString() {
         System.out.println("1 - tester_instancierEtToString()");
         System.out.println("\ta. " + testHelper.shouldBeTrue(TableauObject.LONGUEUR_DEFAUT >= 0));
-        System.out.println("\tb. " + testHelper.shouldBeEqual(TableauObject.VALEUR_DEFAUT, 0));
+        System.out.println("\tb. " + testHelper.shouldBeEqual(TableauObject.VALEUR_DEFAUT, null));
         t1 = new TableauObject(4, 2);
         System.out.println("\tc. " + t1);
 
@@ -58,8 +57,8 @@ public class TableauObjectTest {
         System.out.println("\te. " + t3);
 
         System.out.println("\tf. " + testHelper.shouldBeEqual(t1.toString(), "longueur: 4 [2, 2, 2, 2]"));
-        System.out.println("\tg. " + testHelper.shouldBeEqual(t2.toString(), "longueur: 3 [0, 0, 0]"));
-        System.out.println("\th. " + testHelper.shouldBeEqual(t3.toString(), "longueur: 5 [0, 0, 0, 0, 0]"));
+        System.out.println("\tg. " + testHelper.shouldBeEqual(t2.toString(), "longueur: 3 [null, null, null]"));
+        System.out.println("\th. " + testHelper.shouldBeEqual(t3.toString(), "longueur: 5 [null, null, null, null, null]"));
 
         System.out.println("\ti. " + testHelper.shouldBeEqual(new TableauObject(0, 0).toString(), "longueur: 0 []"));
     }
