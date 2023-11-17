@@ -36,7 +36,7 @@ public class TableauObject {
     }
 
     public void shuffle() {
-        Random random = new Random(System.currentTimeMillis());
+        Random random = new Random();
 
         // algorithme de Fisher–Yates
         for (int i = size() - 1; i > 0; i--) {
