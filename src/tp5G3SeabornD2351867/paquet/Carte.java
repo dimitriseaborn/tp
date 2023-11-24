@@ -34,12 +34,23 @@ public class Carte {
     }
 
     public char getCharCarte() {
-        char c = 0;
+        char c;
 
-        for (int i = 0; i < COULEURS_VALIDES.length && c == 0; i++) {
-            if (COULEURS_VALIDES[i].equals(couleur)) {
-                c = COULEURS_CAR[i];
-            }
+        switch (couleur) {
+            case "pique":
+                c = COULEURS_CAR[0];
+                break;
+            case "trèfle":
+                c = COULEURS_CAR[1];
+                break;
+            case "carreau":
+                c = COULEURS_CAR[2];
+                break;
+            case "coeur":
+                c = COULEURS_CAR[3];
+                break;
+            default:
+                throw new RuntimeException("la couleur de la carte n'est pas reconnue : " + couleur);
         }
         return c;
     }

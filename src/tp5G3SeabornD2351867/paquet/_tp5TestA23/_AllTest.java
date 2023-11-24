@@ -20,15 +20,15 @@ public class _AllTest {
         System.out.println("############### Terminé!!! " + iTest + "/" + tabTest.length);
     }
 
+    public static void main(String[] args) {
+        new _AllTest();
+    }
+
     private void tester(int iTest) {
 
         String str = (iTest != 0 ? "\n" : "") +
                 "#######  " + (iTest + 1) + " - " + (tabTest[iTest].getClass().getName()) + "()"; //cette ligne affiche le nom de la classe
         System.out.println(str);
         tabTest[iTest].tester();
-    }
-
-    public static void main(String[] args) {
-        new _AllTest();
     }
 }

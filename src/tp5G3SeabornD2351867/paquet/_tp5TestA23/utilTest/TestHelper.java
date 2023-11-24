@@ -45,6 +45,24 @@ public class TestHelper {
         //  afficherInstruction();
     }
 
+    public static void afficherInstruction() {
+
+        String strInstructions = "Pour que ça fonctionne :" +
+                "\n1 - Attention de décommenter tous les tests!" +
+                "\n2 - Vous devez absolument respecter les noms de méthodes du diagramme de classe de l'examen." +
+                "\nATTENTION:" +
+                "\n    Ne changez pas le code des classes de tests. C'est avec ceux-ci que la correction se fait.";
+
+        System.out.println(strInstructions);
+    }
+
+    /**
+     * Utiliser l'encodage UTF8
+     */
+    public static void setEncodage_UTF8ToStdOut() {
+        System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out), true, StandardCharsets.UTF_8));
+    }
+
     public void afficherResultatDuTest() {
         String str;
         str = testReussi ? "Ok: " : "XXXXXXXXX - Le test ne passe pas: ";
@@ -86,24 +104,6 @@ public class TestHelper {
         }
 
         return str;
-    }
-
-    public static void afficherInstruction() {
-
-        String strInstructions = "Pour que ça fonctionne :" +
-                "\n1 - Attention de décommenter tous les tests!" +
-                "\n2 - Vous devez absolument respecter les noms de méthodes du diagramme de classe de l'examen." +
-                "\nATTENTION:" +
-                "\n    Ne changez pas le code des classes de tests. C'est avec ceux-ci que la correction se fait.";
-
-        System.out.println(strInstructions);
-    }
-
-    /**
-     * Utiliser l'encodage UTF8
-     */
-    public static void setEncodage_UTF8ToStdOut() {
-        System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out), true, StandardCharsets.UTF_8));
     }
 
     public boolean shouldBeEqual(int actual, int expected) {

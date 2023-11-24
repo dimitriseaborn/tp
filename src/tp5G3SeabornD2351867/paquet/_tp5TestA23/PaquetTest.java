@@ -1,6 +1,7 @@
 package tp5G3SeabornD2351867.paquet._tp5TestA23;
 
-import tp5G3SeabornD2351867.paquet.*;
+import tp5G3SeabornD2351867.paquet.Carte;
+import tp5G3SeabornD2351867.paquet.Paquet;
 import tp5G3SeabornD2351867.paquet._tp5TestA23.utilTest.ITest;
 import tp5G3SeabornD2351867.paquet._tp5TestA23.utilTest.TestHelper;
 
@@ -22,6 +23,12 @@ public class PaquetTest implements ITest {
 
     public PaquetTest() {
         testH = new TestHelper(true);
+    }
+
+    public static void main(String[] args) {
+        PaquetTest pTest = new PaquetTest();
+
+        pTest.tester();
     }
 
     @Override
@@ -77,7 +84,6 @@ public class PaquetTest implements ITest {
         testH.shouldBeTrue(testReussi);
     }
 
-
     private void tester_unPaquetA52Cartes() {
         System.out.println("\ntester_unPaquetA52Cartes()");
         Paquet pMelange = new Paquet(true);
@@ -98,7 +104,6 @@ public class PaquetTest implements ITest {
         System.out.println("Pour le paquet ordonné:");
         onPeutPigerSeulement52Cartes(pOrdononne);
     }
-
 
     private void tester_unPaquetOrdonneEstOrdonne() {
         System.out.println("\ntester_unPaquetOrdonneEstOrdonne()");
@@ -199,11 +204,5 @@ public class PaquetTest implements ITest {
         s += "\n2 - Vous devez respecter les noms de méthodes données dans ce travail.";
 
         System.out.println(s);
-    }
-
-    public static void main(String[] args) {
-        PaquetTest pTest = new PaquetTest();
-
-        pTest.tester();
     }
 }

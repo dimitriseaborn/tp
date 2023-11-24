@@ -23,6 +23,12 @@ public class CarteTest implements ITest {
         testH = new TestHelper(true);
     }
 
+    public static void main(String[] args) {
+        CarteTest cTest = new CarteTest();
+
+        cTest.tester();
+    }
+
     public void tester() {
         tester_constantesDeClasse();
         tester_ValiderCouleur();
@@ -43,7 +49,6 @@ public class CarteTest implements ITest {
         System.out.println("La constante de classe COULEURS_VALIDES est bien déclaré.");
         testH.shouldBeEqual(Arrays.toString(Carte.COULEURS_VALIDES), "[pique, trèfle, carreau, coeur]");
     }
-
 
     private void tester_ValiderCouleur() {
         String[] couleursValides = {"pique", "trèfle", "carreau", "coeur"};
@@ -84,7 +89,6 @@ public class CarteTest implements ITest {
             testH.shouldBeFalse(Carte.valeurEstValide(valeur));
         }
     }
-
 
     private void tester_MutateursEtAccesseur_couleur() {
         String[] couleursValides = {"pique", "trèfle", "carreau", "coeur"};
@@ -140,7 +144,6 @@ public class CarteTest implements ITest {
             }
         }
     }
-
 
     private void tester_Constructeurs() {
         Carte carte;
@@ -210,12 +213,5 @@ public class CarteTest implements ITest {
 
         System.out.println("equals : la comparaison de 2 cartes de même couleur, de même valeur et d'instances différentes retourne true.");
         testH.shouldBeEqual(c2pi, c2piV2);
-    }
-
-
-    public static void main(String[] args) {
-        CarteTest cTest = new CarteTest();
-
-        cTest.tester();
     }
 }
