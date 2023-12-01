@@ -1,3 +1,10 @@
+/*  420-201 - TP5
+ *  Groupe : 3 – mardi & vendredi
+ *  Nom : Seaborn
+ *  Prénom : Dimitri
+ *  DA : 2351867
+ */
+
 package tp5G3SeabornD2351867;
 
 import tp5G3SeabornD2351867.paquet.Carte;
@@ -11,12 +18,13 @@ public class Main21 {
 
     public Main21(Paquet paquet) {
         this.paquet = paquet;
+        mainDe21 =new ArrayList<>();
     }
 
     private String getStrMain21() {
         String str = "";
         for (int i = 0; i < mainDe21.size(); i++) {
-            str += i + " - " + mainDe21.get(i).toString();
+            str += i + 1 + " - " + mainDe21.get(i).toString() + "\n";
         }
         return str;
     }
@@ -69,7 +77,7 @@ public class Main21 {
     public String toString() {
         String str = getStrMain21();
         str += "valeur du jeu 21 : " + getValeurMainDe21() + " -> ";
-        str += main21Perdante() ? "21 est dépassé" : 21 - getValeurMainDe21() + " pour dépasser";
+        str += main21Perdante() ? "21 est dépassé\n" : 21 - getValeurMainDe21() + " pour dépasser.\n";
         return str;
     }
 }
