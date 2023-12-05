@@ -10,11 +10,14 @@ package tp5G3SeabornD2351867;
 import tp5G3SeabornD2351867._utile.Utile;
 
 public class App21 {
+    private Partie21 p;
+
     public App21() {
         System.out.println("Seaborn, Dimitri");
         boolean rejouer;
         do {
-            p().jouer();
+            p = new Partie21();
+            p.jouer();
             String reponse;
             do {
                 reponse = Utile.lireString("Partie terminée, voulez vous jouer une autre partie? [o/n]");
@@ -23,10 +26,6 @@ public class App21 {
         } while (rejouer);
         System.out.println("Seaborn, Dimitri");
         System.out.println("Au revoir !");
-    }
-
-    private Partie21 p() {
-        return new Partie21();
     }
 
     public static void main(String[] args) {

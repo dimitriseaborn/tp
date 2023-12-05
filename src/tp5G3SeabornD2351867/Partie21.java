@@ -17,8 +17,8 @@ public class Partie21 {
 
     public void jouer() {
         paquet = new Paquet(true);
-        jeuJoueur = new Main21(paquet);
-        jeuBanquier = new Main21(paquet);
+        jeuJoueur = new Main21(paquet, 2);
+        jeuBanquier = new Main21(paquet, 2);
         if (!debuterPartie()) {
             if (!faireJouerLeJoueur()) {
                 faireJouerLeBanquier();
@@ -47,7 +47,7 @@ public class Partie21 {
     }
 
     private void faireJouerLeBanquier() {
-        while (jeuBanquier.getValeurMainDe21() < jeuJoueur.getValeurMainDe21() && !jeuBanquier.main21GagnanteOuPerdante()) {
+        while (jeuBanquier.getValeurMainDe21() <= jeuJoueur.getValeurMainDe21() && !jeuBanquier.main21GagnanteOuPerdante()) {
             System.out.println("Le banquier pige...");
             jeuBanquier.pigerAu21();
             afficherJeuBanquier();
@@ -65,7 +65,7 @@ public class Partie21 {
                 strReponse = Utile.lireString("(C)onserver son jeu ou (d)emander une carte ?");
                 estReponseValide = strReponse.equalsIgnoreCase("d") || strReponse.equalsIgnoreCase("c");
                 if (!estReponseValide) {
-                    System.out.println("Entrez un choix valide (cd)");
+                    System.out.print("Entrez un choix valide (cd)");
                 }
                 System.out.println();
             } while (!estReponseValide);
@@ -79,11 +79,6 @@ public class Partie21 {
     }
 
     private boolean debuterPartie() {
-        jeuBanquier.pigerAu21();
-        jeuBanquier.pigerAu21();
-        jeuJoueur.pigerAu21();
-        jeuJoueur.pigerAu21();
-
         afficherJeuBanquier();
         System.out.println();
         afficherJeuJoueur();

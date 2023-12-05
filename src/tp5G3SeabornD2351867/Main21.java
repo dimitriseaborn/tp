@@ -16,9 +16,12 @@ public class Main21 {
     private ArrayList<Carte> mainDe21;
     private Paquet paquet;
 
-    public Main21(Paquet paquet) {
+    public Main21(Paquet paquet, int nbCarte) {
         this.paquet = paquet;
         mainDe21 =new ArrayList<>();
+        for (int i = 0; i < nbCarte; i++) {
+            pigerAu21();
+        }
     }
 
     private String getStrMain21() {
